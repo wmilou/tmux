@@ -15,11 +15,11 @@ install_tpm_plugin(){
 
 install_tmux_configs(){
     printf "${GREEN}Instaling TMUX config ... ${NC} \n"
+    rm -rf /tmp/tmux_config.conf
     mv ~/.tmux.conf ~/.tmux.conf_$(date +%F_%R)
     git clone https://github.com/wmilou/tmux /tmp/tmux_config.conf
     cp /tmp/tmux_config.conf/tmux.conf ~/.tmux.conf
     printf "${GREEN}${BOLD}Config Instaled ! ${NC} \n"
-    rm -rf /tmp/tmux_config.conf
 }
 
 install_tpm_plugin
