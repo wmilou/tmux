@@ -19,6 +19,7 @@ install_tmux_configs(){
     mv ~/.tmux.conf ~/.tmux.conf_$(date +%F_%R)
     git clone https://github.com/wmilou/tmux /tmp/tmux_config.conf
     cp /tmp/tmux_config.conf/tmux.conf ~/.tmux.conf
+    tmux source ~/.tmux.conf
     printf "${GREEN}${BOLD}Config Instaled ! ${NC} \n"
 }
 
